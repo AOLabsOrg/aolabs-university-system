@@ -8,9 +8,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{ED2753ED-9F07-430B-A327-9B2A58344FBC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{E278B766-80B6-4078-8572-3A2B231D27F3}"
-	ProjectSection(SolutionItems) = preProject
-		architecture.md = architecture.md
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversitySystem.API", "src\UniversitySystem.API\UniversitySystem.API.csproj", "{3D3F9110-0E18-A633-FCB8-66730A3337F0}"
 EndProject

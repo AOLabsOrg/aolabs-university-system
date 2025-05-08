@@ -1,4 +1,4 @@
-﻿# 🧱 Architecture Overview
+# 🧱 Architecture Overview
 
 This project follows the **Clean Architecture** pattern to separate concerns and ensure long-term scalability and maintainability.
 
