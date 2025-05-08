@@ -5,8 +5,6 @@ VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{ED2753ED-9F07-430B-A327-9B2A58344FBC}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{E278B766-80B6-4078-8572-3A2B231D27F3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversitySystem.API", "src\UniversitySystem.API\UniversitySystem.API.csproj", "{3D3F9110-0E18-A633-FCB8-66730A3337F0}"
@@ -19,8 +17,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversitySystem.Infrastruc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversitySystem.Persistence", "src\UniversitySystem.Persistence\UniversitySystem.Persistence.csproj", "{3D10655A-487A-48E1-A5A4-0D4FAD5A6B4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversitySystem.UnitTests", "tests\UniversitySystem.UnitTests\UniversitySystem.UnitTests.csproj", "{61913EF6-64AD-4BD6-BB71-E901499824A0}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
 	ProjectSection(SolutionItems) = preProject
 		CODE_OF_CONDUCT.md = CODE_OF_CONDUCT.md
@@ -28,6 +24,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		LICENSE.txt = LICENSE.txt
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{36E9BFE2-3032-4C7D-A3F4-F2818DF5C2A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversitySystem.UnitTests", "tests\UniversitySystem.UnitTests\UniversitySystem.UnitTests.csproj", "{49EE7D0A-EE2A-4FCE-B245-416C944A9A4A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,10 +55,10 @@ Global
 		{3D10655A-487A-48E1-A5A4-0D4FAD5A6B4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D10655A-487A-48E1-A5A4-0D4FAD5A6B4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D10655A-487A-48E1-A5A4-0D4FAD5A6B4B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{61913EF6-64AD-4BD6-BB71-E901499824A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{61913EF6-64AD-4BD6-BB71-E901499824A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{61913EF6-64AD-4BD6-BB71-E901499824A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{61913EF6-64AD-4BD6-BB71-E901499824A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49EE7D0A-EE2A-4FCE-B245-416C944A9A4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49EE7D0A-EE2A-4FCE-B245-416C944A9A4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49EE7D0A-EE2A-4FCE-B245-416C944A9A4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49EE7D0A-EE2A-4FCE-B245-416C944A9A4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,7 +69,7 @@ Global
 		{B1CDB849-280D-44A1-A8CA-1A15A580D9BD} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{E06F5B05-0EC0-4518-9C9D-C161ADE0BC36} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{3D10655A-487A-48E1-A5A4-0D4FAD5A6B4B} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
-		{61913EF6-64AD-4BD6-BB71-E901499824A0} = {ED2753ED-9F07-430B-A327-9B2A58344FBC}
+		{49EE7D0A-EE2A-4FCE-B245-416C944A9A4A} = {36E9BFE2-3032-4C7D-A3F4-F2818DF5C2A5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {994FB463-6BC1-4552-A60A-1CCF038C4FFE}
