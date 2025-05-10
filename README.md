@@ -2,7 +2,7 @@
 
 **Open-source university management system for the Arab world.**
 
-This project is part of [AOLabs](https://github.com/AOLabs) — an open-source initiative aimed at rebuilding and modernizing critical digital infrastructure across the Arab world, starting with education.
+This project is part of [AOLabsOrg](https://github.com/AOLabsOrg) — an open-source initiative aimed at rebuilding and modernizing critical digital infrastructure across the Arab world, starting with education.
 
 ## 🎯 Project Goal
 
@@ -41,7 +41,7 @@ Pull requests are welcome! Check out the [contributing guide](./CONTRIBUTING.md)
 
 All contributions are the property of their respective authors.
 
-This project is managed by the [AOLabs Organization](https://github.com/AOLabs) and governed under the MIT License.
+This project is managed by the [AOLabsOrg Organization](https://github.com/AOLabsOrg) and governed under the MIT License.
 
 Any major decisions (design, features, releases) are reviewed and approved by the maintainers of the organization.
 
