@@ -41,7 +41,7 @@ Pull requests are welcome! Check out the [contributing guide](./CONTRIBUTING.md)
 
 All contributions are the property of their respective authors.
 
-This project is managed by the [AOLabs Organization](https://github.com/AOLabs) and governed under the MIT License.
+This project is managed by the [AOLabsOrg Organization](https://github.com/AOLabsOrg) and governed under the MIT License.
 
 Any major decisions (design, features, releases) are reviewed and approved by the maintainers of the organization.
 
