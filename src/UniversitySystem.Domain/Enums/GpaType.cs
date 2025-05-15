@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace UniversitySystem.Domain.Enums
 {
-    internal class GpaTypes
+    public enum GpaType
     {
+       Gpa,
+       Grades
     }
 }

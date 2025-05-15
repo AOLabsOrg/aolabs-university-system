@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UniversitySystem.Domain.Common;
+using UniversitySystem.Domain.Enums;
 
 namespace UniversitySystem.Domain.Entities
 {
@@ -13,6 +14,7 @@ namespace UniversitySystem.Domain.Entities
         public string NationalId { get; set; }
         public string Email { get; set; }
         public string Gender { get; set; }
+        public GpaType Gpa {  get; set; }
         public DateTime BirthDate { get; set; }
         public int AcademicYear { get; set; }
 
@@ -34,9 +36,5 @@ namespace UniversitySystem.Domain.Entities
 
     }
 
-    public enum GpaType
-    {
-        Gpa,
-        Grades 
-    }
+    
 }
