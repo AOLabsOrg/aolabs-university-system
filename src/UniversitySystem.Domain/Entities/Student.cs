@@ -11,13 +11,9 @@ namespace UniversitySystem.Domain.Entities
     {
         public string FullName { get; set; }
         public string NationalId { get; set; }
-
         public string Email { get; set; }
-
         public string Gender { get; set; }
-
         public DateTime BirthDate { get; set; }
-
         public int AcademicYear { get; set; }
 
         // Foreign key to Department
@@ -36,5 +32,11 @@ namespace UniversitySystem.Domain.Entities
         public Guid SpecializationId { get; set; }
         public Specialization Specialization { get; set; } = default!;
 
+    }
+
+    public enum GpaType
+    {
+        Gpa,
+        Grades 
     }
 }
