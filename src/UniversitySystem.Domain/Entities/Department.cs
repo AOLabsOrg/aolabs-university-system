@@ -16,12 +16,30 @@ namespace UniversitySystem.Domain.Entities;
 
 public class Department : BaseEntity
 {
-    public string Name { get; set; } = string.Empty;
+    private string _name = string.Empty;
 
-    // Foreign key to Faculty
+    public string Name
+    {
+        get => _name;
+        set
+        {
+            if (string.IsNullOrWhiteSpace(value))
+                throw new ArgumentException("Department name is required");
+            _name = value;
+        }
+    }
+
     public Guid FacultyId { get; set; }
-    public Faculty Faculty { get; set; } = default!;
 
-    // Navigation to Specializations
+    public Faculty Faculty { get; set; } = default!;
     public ICollection<Specialization> Specializations { get; set; } = new List<Specialization>();
+    public ICollection<Student> Students { get; set; } = new List<Student>();
+
+    public Department(string name, Guid facultyId)
+    {
+        Name = name;
+        FacultyId = facultyId;
+    }
+
+    private Department() { }
 }

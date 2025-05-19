@@ -17,30 +17,91 @@ namespace UniversitySystem.Domain.Entities;
 
 public class Student : BaseEntity
 {
-    public string FullName { get; set; } = null!;
-    public string NationalId { get; set; } = null!;
-    public string Email { get; set; } = null!;
-    public string Gender { get; set; } = null!;
-    public GpaType Gpa { get; set; }
+    private string _fullName = string.Empty;
+    private string _nationalId = string.Empty;
+    private string _email = string.Empty;
+
+    public string FullName
+    {
+        get => _fullName;
+        set
+        {
+            if (string.IsNullOrWhiteSpace(value))
+                throw new ArgumentException("Student name is required");
+            _fullName = value;
+        }
+    }
+
+    public string NationalId
+    {
+        get => _nationalId;
+        set
+        {
+            if (string.IsNullOrWhiteSpace(value))
+                throw new ArgumentException("National ID is required");
+            if (value.Length != 14)
+                throw new ArgumentException("National ID must be 14 digits");
+            _nationalId = value;
+        }
+    }
+
+    public string Email
+    {
+        get => _email;
+        set
+        {
+            if (string.IsNullOrWhiteSpace(value))
+                throw new ArgumentException("Email is required");
+            if (!value.Contains('@'))
+                throw new ArgumentException("Email is invalid");
+            _email = value;
+        }
+    }
+
+    public Gender Gender { get; set; }
+
     public DateTime BirthDate { get; set; }
+
     public int AcademicYear { get; set; }
 
-    // Foreign key to Department
-    public Guid DepartmentId { get; set; }
-    public Department Department { get; set; } = default!;
+    public int Level { get; set; }
 
-    // Foreign key to University
+    public GpaType GpaType { get; set; }
+
     public Guid UniversityId { get; set; }
-    public University University { get; set; } = default!;
-
-    // Foreign key to Faculty
     public Guid FacultyId { get; set; }
-    public Faculty Faculty { get; set; } = default!;
-
-    // Foreign key to Specialization
+    public Guid DepartmentId { get; set; }
     public Guid SpecializationId { get; set; }
+
+    public University University { get; set; } = default!;
+    public Faculty Faculty { get; set; } = default!;
+    public Department Department { get; set; } = default!;
     public Specialization Specialization { get; set; } = default!;
 
+    public ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>();
+    public ICollection<Grade> Grades { get; set; } = new List<Grade>();
+    public ICollection<Evaluation> Evaluations { get; set; } = new List<Evaluation>();
+    public ICollection<Attendance> Attendances { get; set; } = new List<Attendance>();
+
+    public Student(string fullName, string nationalId, string email, Gender gender, DateTime birthDate,
+        int academicYear, int level, GpaType gpaType, Guid universityId, Guid facultyId,
+        Guid departmentId, Guid specializationId)
+    {
+        FullName = fullName;
+        NationalId = nationalId;
+        Email = email;
+        Gender = gender;
+        BirthDate = birthDate;
+        AcademicYear = academicYear;
+        Level = level;
+        GpaType = gpaType;
+        UniversityId = universityId;
+        FacultyId = facultyId;
+        DepartmentId = departmentId;
+        SpecializationId = specializationId;
+    }
+
+    private Student() { }
 }
 
 
