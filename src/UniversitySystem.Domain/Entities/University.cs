@@ -16,8 +16,41 @@ namespace UniversitySystem.Domain.Entities;
 
 public class University : BaseEntity
 {
-    public string Name { get; set; } = string.Empty;
-    public string? Location { get; set; }
+    private string _name = string.Empty;
+    private string _location = string.Empty;
 
+    public string Name
+    {
+        get => _name;
+        set
+        {
+            if (string.IsNullOrEmpty(value))
+                throw new ArgumentException("University name is required");
+            _name = value;
+        }
+    }
+
+    public string Location
+    {
+        get => _location;
+        set
+        {
+            if (string.IsNullOrEmpty(value))
+                throw new ArgumentException("University location is required");
+            _location = value;
+        }
+    }
+
+    // Navigation Properties
     public ICollection<Faculty> Faculties { get; set; } = new List<Faculty>();
+    public ICollection<Student> Students { get; set; } = new List<Student>();
+
+    // Constructor
+    public University(string name, string location)
+    {
+        Name = name;
+        Location = location;
+    }
+
+    private University() { }
 }
