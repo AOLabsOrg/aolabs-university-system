@@ -11,7 +11,7 @@ To build a scalable, modular, and open-source system that universities can use t
 ## 🧱 Tech Stack
 
 - **Backend**: ASP.NET Core 8 (Clean Architecture)
-- **Database**: PostgreSQL (Code First via EF Core)
+- **Database**: SQL Server (Code First via EF Core)
 - **Authentication**: JWT & Role-based access control
 - **Reporting**: FastReport or PDF generation
 - **Docs**: Markdown + Diagrams
