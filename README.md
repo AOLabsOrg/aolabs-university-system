@@ -29,7 +29,7 @@ To build a scalable, modular, and open-source system that universities can use t
 See [`/docs`](./docs) folder for:
 - [Architecture Overview](./docs/architecture.md)
 - Roadmap (coming soon)
-- ER Diagram (coming soon)
+- [ER Diagram](./docs/erd.md)
 
 ## 🤝 Contributing
 
