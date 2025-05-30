@@ -57,8 +57,8 @@ public class Instructor : BaseEntity
     public Specialization Specialization { get; set; } = default!;
 
     public ICollection<CourseInstructor> CourseInstructors { get; set; } = new List<object>();
-    public ICollection<Lecture> Lectures { get; set; } = new List<Lecture>(); 
-    public ICollection<Schedule> Schedules { get; set; } = new List<object>(); 
+    public ICollection<Lecture> Lectures { get; set; } = new List<Lecture>();
+    public ICollection<Schedule> Schedules { get; set; } = new List<object>();
 
     public Instructor(string fullName, string email, InstructorType instructorType, Guid universityId, Guid facultyId, Guid departmentId, Guid specializationId)
     {
