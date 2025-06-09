@@ -2,7 +2,7 @@
 
 namespace UniversitySystem.Domain.Entities;
 
-public class CourseInstructor
+public class CourseInstructor : BaseEntity
 {
     public Guid CourseId { get; set; }
     public Guid InstructorId { get; set; }
