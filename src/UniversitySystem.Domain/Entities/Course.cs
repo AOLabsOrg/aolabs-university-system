@@ -30,7 +30,7 @@ public class Course : BaseEntity
             _code = value;
         }
     }
-    public int? CreditHours
+    public int CreditHours
     {
         get => _creditHours;
         set
@@ -38,11 +38,11 @@ public class Course : BaseEntity
             if (value <= 0 || value == null)
                 throw new ArgumentException("Credit hours must be greater than zero");
 
-            _creditHours = (int)value;
+            _creditHours = value;
         }
     }
 
-    public Guid? SpecializationId { get; set; }
+    public Guid SpecializationId { get; set; }
 
 
     // Navigation Properties
@@ -54,10 +54,12 @@ public class Course : BaseEntity
     public ICollection<CourseInstructor> CourseInstructors { get; set; } = new List<CourseInstructor>();
     public ICollection<Evaluation> Evaluations { get; set; } = new List<Evaluation>();
 
-    public Course(string name, string code)
+    public Course(string name, string code, int creditHours, Guid specializationId)
     {
         Name = name;
         Code = code;
+        CreditHours = creditHours;
+        SpecializationId = specializationId;
     }
     private Course() { }
 }
