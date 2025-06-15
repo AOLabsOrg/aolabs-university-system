@@ -49,7 +49,7 @@ public class Course : BaseEntity
     public Specialization Specialization { get; set; } = default!;
     public ICollection<Schedule> Schedules { get; set; } = new List<Schedule>();
     public ICollection<Lecture> Lectures { get; set; } = new List<Lecture>();
-    public ICollection<Enrollement> Enrollements { get; set; } = new List<Enrollement>();
+    public ICollection<Enrollment> Enrollements { get; set; } = new List<Enrollment>();
     public ICollection<Grade> Grades { get; set; } = new List<Grade>();
     public ICollection<CourseInstructor> CourseInstructors { get; set; } = new List<CourseInstructor>();
     public ICollection<Evaluation> Evaluations { get; set; } = new List<Evaluation>();
